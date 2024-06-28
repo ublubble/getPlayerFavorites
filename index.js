@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
 })
         
 app.get('/:gameid', function(req, res) {
-  client.get(`https://www.roblox.com/users/favorites/list-json?assetTypeId=9&itemsPerPage=100&pageNumber=1&userId=${req.params.gameid}` ).then(function(result) {
+  client.get(`https://www.roblox.com/users/favorites/list-json?assetTypeId=9&itemsPerPage=100&pageNumber=1&userId=${req.params.gameid}`).then(function(result) {
     res.send(result.data);
   })
 })
